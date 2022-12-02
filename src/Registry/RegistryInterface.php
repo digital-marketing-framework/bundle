@@ -7,4 +7,6 @@ use DigitalMarketingFramework\Distributer\Core\Registry\RegistryInterface as Dis
 
 interface RegistryInterface extends CollectorRegistryInterface, DistributerRegistryInterface
 {
+    public function getDefaultRelayConfiguration(): array;
+    public function getDefaultCollectorConfiguration(): array;
 }

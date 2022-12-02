@@ -30,4 +30,10 @@ class Registry extends CoreRegistry implements RegistryInterface
         protected QueueDataFactoryInterface $queueDataFactory = new QueueDataFactory(),
     ) {
     }
+
+    public function getDefaultConfiguration(): array
+    {
+        return $this->getDefaultRelayConfiguration() 
+            + $this->getDefaultCollectorConfiguration();
+    }
 }
